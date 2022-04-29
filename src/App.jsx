@@ -3,8 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import Demo from "./Demo";
 
-let show = false;
-
 class App extends React.Component {
   //   getInitialState: function() {
   //     return this.props.userData;
@@ -15,18 +13,9 @@ class App extends React.Component {
       // ...this.props.userData
     };
   }
-  showGolden = () => {
-    if (!show) {
-      Demo.init();
-    } else {
-      Demo.destroy();
-    }
-    show = !show;
-
-    // this.props.glEventHub.emit("user-select", this.state);
-  };
   render() {
-    return <div onClick={this.showGolden}> click this to show/hide </div>;
+    Demo.init();
+    return <div><strong><center><p>MALT: Multidirectional Array Language Transpiler </p></center></strong></div>;
   }
 }
 
